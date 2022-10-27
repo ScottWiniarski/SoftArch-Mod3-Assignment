@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
+
+    // lookup what the actual poker hands are, use the getters and setters I just added.
+    // consider using enums instead of actual strings for poker values
     //private List<Card> hand;
     private List<Card> fullhouse;
     private List<Card> flush;
