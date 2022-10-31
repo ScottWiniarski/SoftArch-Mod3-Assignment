@@ -8,7 +8,7 @@ public class Main {
         Game game = new Game();
         ArrayList<Card> drawnHand = new ArrayList<>();
 
-        /*
+        //for fullhouse
         drawnHand.add(new Card("10", Suit.Clubs ));
         drawnHand.add(new Card("Jack", Suit.Diamonds ));
         drawnHand.add(new Card("10", Suit.Hearts ));
@@ -17,55 +17,38 @@ public class Main {
         System.out.println(game.FullHouse(drawnHand));
         drawnHand.clear();
 
-         */
-        drawnHand.add(new Card("2", Suit.Diamonds));
-        drawnHand.add(new Card("5", Suit.Diamonds));
-        drawnHand.add(new Card("7", Suit.Diamonds));
-        drawnHand.add(new Card("Jack", Suit.Diamonds));
-        drawnHand.add(new Card("King", Suit.Diamonds));
-        System.out.println(game.Flush(drawnHand));
-        drawnHand.clear();
-        /*
-        drawnHand.add(new Card("10", "Clubs"));
-        drawnHand.add(new Card("Jack", "Diamond"));
-        drawnHand.add(new Card("10", "Hearts"));
-        drawnHand.add(new Card("10", "Diamond"));
-        drawnHand.add(new Card("Jack", "Hearts"));
-        System.out.println(game.FullHouse(drawnHand));
-        drawnHand.clear();
-
         // for flush
-        drawnHand.add( new Card("2", "Diamonds"));
-        drawnHand.add( new Card("5", "Diamonds"));
-        drawnHand.add( new Card("7", "Diamonds"));
-        drawnHand.add( new Card("Jack", "Diamonds"));
-        drawnHand.add( new Card("King", "Diamonds"));
+        drawnHand.add( new Card("2", Suit.Diamonds));
+        drawnHand.add( new Card("5", Suit.Diamonds));
+        drawnHand.add( new Card("7", Suit.Diamonds));
+        drawnHand.add( new Card("Jack", Suit.Diamonds));
+        drawnHand.add( new Card("King", Suit.Diamonds));
         System.out.println(game.Flush(drawnHand));
         drawnHand.clear();
 
         // for 4 of a kind - works
-        drawnHand.add( new Card("Queen", "Spades"));
-        drawnHand.add( new Card("Queen", "Hearts"));
-        drawnHand.add( new Card("Queen", "Clubs"));
-        drawnHand.add( new Card("Queen", "Diamonds"));
-        drawnHand.add( new Card("3","Hearts"));
+        drawnHand.add( new Card("Queen", Suit.Clubs));
+        drawnHand.add( new Card("Queen", Suit.Hearts));
+        drawnHand.add( new Card("Queen", Suit.Clubs));
+        drawnHand.add( new Card("Queen", Suit.Diamonds));
+        drawnHand.add( new Card("3",Suit.Hearts));
         System.out.println("Is the hand a four of a kind?: " + game.FourKind(drawnHand));
         //System.out.println(game.FourKind(drawnHand));
         drawnHand.clear();
 
 
         // for 3 of a kind - works
-        drawnHand.add( new Card("Queen", "Spades"));
-        drawnHand.add( new Card("Jack", "Hearts"));
-        drawnHand.add( new Card("Queen", "Clubs"));
-        drawnHand.add( new Card("Queen", "Diamonds"));
-        drawnHand.add( new Card("3","Hearts"));
+        drawnHand.add( new Card("Queen", Suit.Spades));
+        drawnHand.add( new Card("Jack", Suit.Hearts));
+        drawnHand.add( new Card("Queen", Suit.Clubs));
+        drawnHand.add( new Card("Queen", Suit.Diamonds));
+        drawnHand.add( new Card("3",Suit.Hearts));
         for(Card card : drawnHand){
             System.out.println(card.getFace() + card.getSuit());
         }
         System.out.println("Is the hand a three a kind?: " + game.ThreeKind(drawnHand));
         drawnHand.clear();
 
-         */
+
     }
 }
